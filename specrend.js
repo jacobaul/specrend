@@ -91,9 +91,7 @@ function xyz_to_rgb(cs, xc, yc, zc, r, g, b){
     xg = cs.xGreen;  yg = cs.yGreen;  zg = 1 - (xg + yg);
     xb = cs.xBlue;   yb = cs.yBlue;   zb = 1 - (xb + yb);
 
-
     xw = cs.xWhite;  yw = cs.yWhite;  zw = 1 - (xw + yw);
-
 
 
     rx = (yg * zb) - (yb * zg);  ry = (xb * zg) - (xg * zb);  rz = (xg * yb) - (xb * yg);
@@ -169,8 +167,6 @@ function norm_rgb(r, g, b){
         r.val /= greatest;
         g.val /= greatest;
         b.val /= greatest;
-
-
     }
 }
 
@@ -262,4 +258,3 @@ function wavelength_to_rgb(lambda){
         return {r: r.val, g: g.val, b:b.val, approx:false};
     }
 }
-console.log(wavelength_to_rgb(1000));
